@@ -26,7 +26,7 @@ function UyeOl() {
 
             <div className={"container"}>
                 <div className={"justify-content-md-center row"}>
-                    <div className={"col-lg-9 col-md-auto"}>
+                    <div className={"col-lg-7 col-md-auto"}>
                         <Card className={"m-5"} style={
                             {"background-color": "white"}
                         }>
