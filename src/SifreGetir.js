@@ -1,6 +1,9 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Alert, Button, Card, Container, Form, Navbar} from "react-bootstrap";
+import {Alert, Button, Card, Container, Form, InputGroup, Navbar} from "react-bootstrap";
+import { AiOutlinePushpin } from "react-icons/ai";
+import {FaAt} from "react-icons/fa";
+
 
 function SifreGetir() {
     return (
@@ -46,7 +49,7 @@ function SifreGetir() {
                                                     "margin-bottom": "30px"
                                                 }
                                             }>
-                                                <Alert.Heading>Hatırlatma !!</Alert.Heading>
+                                                <Alert.Heading><AiOutlinePushpin /> Hatırlatma !!</Alert.Heading>
                                                 <hr/>
                                                 <p>
                                                     Lütfen sistemde kayıtlı olan e-posta adresinizi giriniz.
@@ -56,7 +59,10 @@ function SifreGetir() {
                                             </Alert>
                                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                                 <Form.Label>*E-posta (Kullanıcı Adı)</Form.Label>
-                                                <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                <InputGroup>
+                                                    <InputGroup.Text id="btnGroupAddon2"><FaAt/></InputGroup.Text>
+                                                    <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                </InputGroup>
                                             </Form.Group>
                                             <br/>
                                             <hr/>

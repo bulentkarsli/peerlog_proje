@@ -1,7 +1,9 @@
 import React, {} from "react";
 import {Link} from "react-router-dom";
-import {Button, Card, Col, Container, Form, Navbar, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Form, InputGroup, Navbar, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {FaAt, FaKey} from "react-icons/fa";
+import {BsFillExclamationSquareFill} from "react-icons/bs";
 
 function GirisYap() {
 
@@ -49,7 +51,10 @@ function GirisYap() {
                                             }>
                                                 <Form.Label column sm="4">*Kullanıcı Adı :</Form.Label>
                                                 <Col sm="8">
-                                                    <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt/></InputGroup.Text>
+                                                        <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                    </InputGroup>
                                                 </Col>
                                             </Form.Group>
 
@@ -62,10 +67,14 @@ function GirisYap() {
                                                         }>
                                                 <Form.Label column sm="4">*Şifre :</Form.Label>
                                                 <Col sm="8">
-                                                    <Form.Control type="password" placeholder="Şifre Giriniz"/>
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey/></InputGroup.Text>
+                                                        <Form.Control type="password" placeholder="Şifre Giriniz"/>
+                                                    </InputGroup>
                                                 </Col>
                                             </Form.Group>
-                                            <br/><hr/>
+                                            <br/>
+                                            <hr/>
                                             <div className={"container"}>
                                                 <div className={"justify-content-md-center row"}>
                                                     <div className={"col-lg-15 col-md-auto"}>

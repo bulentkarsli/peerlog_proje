@@ -12,6 +12,10 @@ import {
     Row
 } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BsAt, BsFillExclamationSquareFill, BsInfoSquare, BsInfoSquareFill} from "react-icons/bs";
+import {AiFillPhone} from "react-icons/ai";
+import {FaAt, FaPhone} from "react-icons/fa";
+
 
 function KisiEkle() {
 
@@ -67,7 +71,7 @@ function KisiEkle() {
                                                 <Form.Label column sm="4">*Ad :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill/></InputGroup.Text>
                                                         <Form.Control type="text" placeholder="Ad Giriniz"/>
                                                     </InputGroup>
                                                 </Col>
@@ -82,7 +86,7 @@ function KisiEkle() {
                                                 <Form.Label column sm="4">*Soyad :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill/></InputGroup.Text>
                                                         <Form.Control type="text" placeholder="Soyad Giriniz"/>
                                                     </InputGroup>
                                                 </Col>
@@ -97,7 +101,7 @@ function KisiEkle() {
                                                 <Form.Label column sm="4">*Telefon Numarası :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaPhone/></InputGroup.Text>
                                                         <Form.Control type="text" placeholder="Telefon Numarası"/>
                                                     </InputGroup>
 
@@ -113,7 +117,7 @@ function KisiEkle() {
                                                 <Form.Label column sm="4">*TC Kimlik No :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill/></InputGroup.Text>
                                                         <Form.Control type="text" placeholder="TC No Giriniz"/>
                                                     </InputGroup>
 
@@ -129,7 +133,7 @@ function KisiEkle() {
                                                 <Form.Label column sm="4">*E-mail :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt /></InputGroup.Text>
                                                         <Form.Control type="email" placeholder="E-posta Giriniz"/>
                                                     </InputGroup>
                                                 </Col>
