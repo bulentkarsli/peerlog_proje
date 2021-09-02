@@ -185,20 +185,19 @@ function KisiEkle() {
                                                         </Dropdown.Menu>
                                                     </Dropdown>
                                                 </FormLabel>
-
                                             </Row>
+                                            <hr/>
                                             <div style={
                                                 {
                                                     "padding-left": "12.5px",
-                                                    "margin-top": "10px",
-                                                    "margin-bottom": "10px"
+                                                    "margin-bottom": "15px"
                                                 }
                                             }>
                                                 <Button as="input" type="submit" value="Kaydet" />{' '}
                                                 <Button href="/KisiGoster" style={
                                                     {
-                                                        "margin-bottom": "10px",
-                                                        "margin-top": "10px"
+                                                        "margin-bottom": "5px",
+                                                        "margin-top": "5px"
                                                     }
                                                 }>Kişileri Göster</Button>
 

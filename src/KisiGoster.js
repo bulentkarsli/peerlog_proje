@@ -42,7 +42,7 @@ function KisiGoster() {
                                     Kişiler
                                 </div>
                             </div>
-                            <Table striped bordered hover size="sm">
+                            <Table striped bordered hover size="sm" style={{"marginBottom":"30px"}}>
                                 <thead>
                                 <tr>
                                     <th>#</th>
@@ -83,11 +83,11 @@ function KisiGoster() {
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
                                     <div className={"col-lg-20 col-md-auto"}>
+                                        <hr/>
                                         <Link to="/KisiEkle">
                                             <Button type={"submit"} style={
                                                 {
-                                                    "margin-bottom": "10px",
-                                                    "margin-top": "10px"
+                                                    "margin-bottom": "15px",
                                                 }
                                             }>
                                                 Yeni Kişi Ekle
@@ -96,7 +96,6 @@ function KisiGoster() {
                                     </div>
                                 </div>
                             </div>
-
                         </Card>
                     </div>
                 </div>

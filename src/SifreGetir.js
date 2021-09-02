@@ -26,7 +26,7 @@ function SifreGetir() {
 
             <div className={"container"}>
                 <div className={"justify-content-md-center row"}>
-                    <div className={"col-lg-8 col-md-auto"}>
+                    <div className={"col-lg-7 col-md-auto"}>
                         <Card className={"m-5"} style={
                             {"background-color": "white"}
                         }>
@@ -38,7 +38,7 @@ function SifreGetir() {
 
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
-                                    <div className={"col-lg-8 col-md-auto"}>
+                                    <div className={"col-lg-10 col-md-auto"}>
                                         <Form>
                                             <Alert variant="success" style={
                                                 {
@@ -58,10 +58,12 @@ function SifreGetir() {
                                                 <Form.Label>*E-posta (Kullanıcı Adı)</Form.Label>
                                                 <Form.Control type="email" placeholder="E-posta Giriniz"/>
                                             </Form.Group>
+                                            <br/>
+                                            <hr/>
                                             <Button type="submit" variant="primary" style={
                                                 {
-                                                    "margin-bottom": "10px",
-                                                    "margin-top": "20px"
+                                                    "margin-bottom": "20px",
+                                                    "margin-top": "5px"
                                                     // "color": "#fff",
                                                     // "background-color": "#6993ff",
                                                     // "border-color": "#6993ff"
@@ -69,8 +71,8 @@ function SifreGetir() {
                                             }>Gönder</Button>{' '}
                                             <Button href="/" type="button" variant="primary" style={
                                                 {
-                                                    "margin-bottom": "10px",
-                                                    "margin-top": "20px",
+                                                    "margin-bottom": "20px",
+                                                    "margin-top": "5px",
                                                     "color": "#7e8299",
                                                     "border-color": "#7e8299"
                                                 }

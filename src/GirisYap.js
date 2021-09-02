@@ -39,7 +39,7 @@ function GirisYap() {
 
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
-                                    <div className={"col-lg-10 col-md-auto"}>
+                                    <div className={"col-lg-12 col-md-auto"}>
                                         <Form>
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" style={
                                                 {
@@ -65,15 +65,15 @@ function GirisYap() {
                                                     <Form.Control type="password" placeholder="Şifre Giriniz"/>
                                                 </Col>
                                             </Form.Group>
-
+                                            <br/><hr/>
                                             <div className={"container"}>
                                                 <div className={"justify-content-md-center row"}>
-                                                    <div className={"col-lg-20 col-md-auto"}>
+                                                    <div className={"col-lg-15 col-md-auto"}>
                                                         <Link to="/KisiGoster">
                                                             <Button type={"submit"} variant="primary" style={
                                                                 {
-                                                                    "margin-bottom": "10px",
-                                                                    "margin-top": "30px",
+                                                                    "margin-bottom": "20px",
+                                                                    "margin-top": "5px",
                                                                     "margin-right": "110px"
                                                                 }
                                                             }>Giriş Yap</Button>{' '}
@@ -81,9 +81,9 @@ function GirisYap() {
                                                         <Link to="/SifreGetir">
                                                             <Button type={"button"} variant="primary" style={
                                                                 {
-                                                                    "margin-bottom": "10px",
-                                                                    "margin-top": "30px",
-                                                                    "background-color":"#ffa800"
+                                                                    "margin-bottom": "20px",
+                                                                    "margin-top": "5px",
+                                                                    "background-color": "#ffa800"
                                                                 }
                                                             }>Şifremi Unuttum</Button>{' '}
                                                         </Link>

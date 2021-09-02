@@ -41,7 +41,7 @@ function UyeOl() {
 
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
-                                    <div className={"col-lg-7 col-md-auto"}>
+                                    <div className={"col-lg-11 col-md-auto"}>
                                         <Form>
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
@@ -119,6 +119,7 @@ function UyeOl() {
                                                 </Col>
                                             </Form.Group>
                                         </Form>
+                                        <br/><hr/>
                                     </div>
                                 </div>
                             </div>
@@ -128,8 +129,7 @@ function UyeOl() {
                                         <Link to="/">
                                             <Button type="submit" style={
                                                 {
-                                                    "margin-bottom": "10px",
-                                                    "margin-top": "20px"
+                                                    "margin-bottom": "15px"
                                                 }
                                             }>Üyeliği Tamamla</Button>
                                         </Link>
