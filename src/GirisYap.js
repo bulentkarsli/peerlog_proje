@@ -72,12 +72,22 @@ function GirisYap() {
                                                 <div className={"justify-content-md-center row"}>
                                                     <div className={"col-lg-20 col-md-auto"}>
                                                         <Link to="/KisiGoster">
-                                                            <Button variant="primary" style={
+                                                            <Button type={"submit"} variant="primary" style={
                                                                 {
                                                                     "margin-bottom": "10px",
-                                                                    "margin-top": "30px"
+                                                                    "margin-top": "30px",
+                                                                    "margin-right": "110px"
                                                                 }
                                                             }>Giriş Yap</Button>{' '}
+                                                        </Link>
+                                                        <Link to="/SifreGetir">
+                                                            <Button type={"button"} variant="primary" style={
+                                                                {
+                                                                    "margin-bottom": "10px",
+                                                                    "margin-top": "30px",
+                                                                    "background-color":"#ffa800"
+                                                                }
+                                                            }>Şifremi Unuttum</Button>{' '}
                                                         </Link>
                                                     </div>
                                                 </div>
@@ -90,11 +100,8 @@ function GirisYap() {
                     </div>
                 </div>
             </div>
-
         </div>
-
     );
-
 }
 
 export default GirisYap;

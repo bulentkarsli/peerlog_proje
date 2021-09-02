@@ -15,7 +15,7 @@ function KisiGoster() {
                         <Nav.Link href="/KisiGoster">Kişiler</Nav.Link>
                         <Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>
                     </Nav>
-                    <Navbar.Toggle />
+                    <Navbar.Toggle/>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <a href="/UyeOl" style={
@@ -83,12 +83,15 @@ function KisiGoster() {
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
                                     <div className={"col-lg-20 col-md-auto"}>
-                                        <Link to="/KisiEkle"><Button style={
-                                            {"margin-bottom": "10px",
-                                                "margin-top": "10px"}
-                                        }>
-                                            Yeni Kişi Ekle
-                                        </Button>
+                                        <Link to="/KisiEkle">
+                                            <Button type={"submit"} style={
+                                                {
+                                                    "margin-bottom": "10px",
+                                                    "margin-top": "10px"
+                                                }
+                                            }>
+                                                Yeni Kişi Ekle
+                                            </Button>
                                         </Link>
                                     </div>
                                 </div>

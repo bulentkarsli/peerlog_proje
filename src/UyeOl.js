@@ -14,8 +14,7 @@ function UyeOl() {
                         <Navbar.Text>
                             <a href="/UyeOl" style={
                                 {
-                                    "padding": "20px",
-
+                                    "padding": "20px"
                                 }
                             }>Üye Ol</a>
                         </Navbar.Text>
@@ -34,7 +33,9 @@ function UyeOl() {
 
                             <div className="bg-secondary card-header">
                                 <div className="text-white card-title h5" style={
-                                    {"text-align": "center"}
+                                    {
+                                        "text-align": "center"
+                                    }
                                 }>Üyelik Alanı
                                 </div>
                             </div>
@@ -126,7 +127,7 @@ function UyeOl() {
                                 <div className={"justify-content-md-center row"}>
                                     <div className={"col-lg-20 col-md-auto"}>
                                         <Link to="/">
-                                            <Button style={
+                                            <Button type="submit" style={
                                                 {
                                                     "margin-bottom": "10px",
                                                     "margin-top": "20px"
