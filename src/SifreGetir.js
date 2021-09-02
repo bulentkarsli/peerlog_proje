@@ -1,7 +1,6 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Alert, Button, Card, Col, Container, Form, Navbar, Row} from "react-bootstrap";
-import {Link} from "react-router-dom";
+import {Alert, Button, Card, Container, Form, Navbar} from "react-bootstrap";
 
 function SifreGetir() {
     return (

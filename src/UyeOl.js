@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
-import {Button, Card, Col, Container, Form, FormControl, InputGroup, Nav, Navbar, Row} from "react-bootstrap";
-import GirisYap from "./GirisYap";
+import {Button, Card, Col, Container, Form, Navbar, Row} from "react-bootstrap";
 
 function UyeOl() {
     return (

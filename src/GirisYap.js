@@ -1,8 +1,7 @@
-import React from "react";
+import React, {} from "react";
 import {Link} from "react-router-dom";
-import {Button, Card, Col, Container, Form, FormControl, InputGroup, Nav, Navbar, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Form, Navbar, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 
 function GirisYap() {
 
@@ -17,7 +16,6 @@ function GirisYap() {
                             <a href="/UyeOl" style={
                                 {
                                     "padding": "20px",
-
                                 }
                             }>Üye Ol</a>
                         </Navbar.Text>

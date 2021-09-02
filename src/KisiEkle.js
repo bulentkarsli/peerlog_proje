@@ -4,16 +4,14 @@ import {
     Card,
     Col,
     Container,
-    Dropdown, DropdownButton,
+    Dropdown,
     Form,
     FormControl, FormLabel,
     InputGroup,
     Nav,
     Navbar,
-    Row,
-    SplitButton
+    Row
 } from "react-bootstrap";
-import {Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function KisiEkle() {
