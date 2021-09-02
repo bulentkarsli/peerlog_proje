@@ -23,13 +23,13 @@ function UyeOl() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
             <div className={"container"}>
                 <div className={"justify-content-md-center row"}>
                     <div className={"col-lg-9 col-md-auto"}>
                         <Card className={"m-5"} style={
                             {"background-color": "white"}
                         }>
-
                             <div className="bg-secondary card-header">
                                 <div className="text-white card-title h5" style={
                                     {
@@ -38,7 +38,6 @@ function UyeOl() {
                                 }>Üyelik Alanı
                                 </div>
                             </div>
-
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
                                     <div className={"col-lg-11 col-md-auto"}>
@@ -136,19 +135,11 @@ function UyeOl() {
                                     </div>
                                 </div>
                             </div>
-
-                            {
-
-                            }
-
-
                         </Card>
                     </div>
                 </div>
             </div>
-
         </div>
-
     )
 }
 

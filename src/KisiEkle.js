@@ -6,7 +6,6 @@ import {
     Container,
     Dropdown,
     Form,
-    FormControl, FormLabel,
     InputGroup,
     Nav,
     Navbar,
@@ -25,7 +24,7 @@ function KisiEkle() {
                         <Nav.Link href="/KisiGoster">Kişiler</Nav.Link>
                         <Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>
                     </Nav>
-                    <Navbar.Toggle />
+                    <Navbar.Toggle/>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text>
                             <a href="/UyeOl" style={
@@ -41,6 +40,7 @@ function KisiEkle() {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+
             <div className={"container"}>
                 <div className={"justify-content-md-center row"}>
                     <div className={"col-lg-7 col-md-auto"}>
@@ -54,153 +54,218 @@ function KisiEkle() {
                             </div>
                             <div className={"container"}>
                                 <div className={"justify-content-md-center row"}>
-                                    <div className={"col-lg-5 col-md-auto"}>
+                                    <div className={"col-lg-11 col-md-auto"}>
                                         <Form style={
                                             {"margin-top": "30px"}
                                         }>
-                                            <Row className="mb-3">
-                                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Label className={"form-label"} style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>*Ad : <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
-                                                        <FormControl
-                                                            type="text"
-                                                            placeholder="Ad"
-                                                        /></InputGroup>
-                                                    </Form.Label>
-                                                </Form.Group>
-                                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Label className={"form-label"} style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>*Soyad : <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
-                                                        <FormControl
-                                                            type="text"
-                                                            placeholder="Soyad"
-                                                        /></InputGroup>
-                                                    </Form.Label>
-                                                </Form.Group>
-                                            </Row>
-                                            <Row className="mb-3">
-                                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Label className={"form-label"} style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>*Telefon Numarası : <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
-                                                        <FormControl
-                                                            type="text"
-                                                            placeholder="Telefon Numarası"
-                                                        /></InputGroup>
-                                                    </Form.Label>
-                                                </Form.Group>
-                                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Label className={"form-label"} style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>*TC Kimlik No : <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
-                                                        <FormControl
-                                                            type="text"
-                                                            placeholder="TC No Giriniz"
-                                                        /></InputGroup>
-                                                    </Form.Label>
-                                                </Form.Group>
-                                            </Row>
-                                            <Row className="mb-3">
-                                                <Form.Group className="mb-3" controlId="formGroupEmail">
-                                                    <Form.Label className={"form-label"} style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>*Mail (Kullanıcı Adı) : <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
-                                                        <FormControl
-                                                            type="email"
-                                                            placeholder="E-posta"
-                                                        /></InputGroup>
-                                                    </Form.Label>
-                                                </Form.Group>
-                                            </Row>
-                                            <Row className="mb-3">
-                                                <fieldset>
-                                                    <Form.Group as={Row} className="mb-3" style={
-                                                        {"padding-left": "12.5px"}
-                                                    }>
-                                                        <Form.Label as="legend" column sm={20} style={
-                                                            {
-                                                                "padding-left": "12.5px",
-                                                                "margin-top": "10px",
-                                                                "margin-bottom": "10px"
-                                                            }
-                                                        }>
-                                                            Statüsü Seçiniz :
-                                                        </Form.Label>
-                                                        <Col sm={10}>
-                                                            <Form.Check
-                                                                type="radio"
-                                                                label="Çalışan"
-                                                                name="formHorizontalRadios"
-                                                                id="formHorizontalRadios1"
-                                                            />
-                                                            <Form.Check
-                                                                type="radio"
-                                                                label="Stajyer"
-                                                                name="formHorizontalRadios"
-                                                                id="formHorizontalRadios2"
-                                                            />
-                                                            <Form.Check
-                                                                type="radio"
-                                                                label="Müşteri"
-                                                                name="formHorizontalRadios"
-                                                                id="formHorizontalRadios3"
-                                                            />
-                                                        </Col>
-                                                    </Form.Group>
-                                                </fieldset>
-                                                <FormLabel style={
-                                                    {
-                                                        "padding-left": "25px",
-                                                        "margin-top": "10px",
-                                                        "margin-bottom": "10px"
-                                                    }
-                                                }> Departman Seçiniz :
-                                                    <Dropdown>
-                                                        <Dropdown.Toggle id="dropdown-button-dark-example1"
-                                                                         variant="secondary" style={
-                                                            {
-                                                                "padding-left": "25px",
-                                                                "margin-top": "10px",
-                                                                "margin-bottom": "130px"
-                                                            }
-                                                        }>
-                                                            Departman Listele
-                                                        </Dropdown.Toggle>
-
-                                                        <Dropdown.Menu variant="dark">
-                                                            <Dropdown.Item href="#/action-1" active>
-                                                                Bilgi İşlem
-                                                            </Dropdown.Item>
-                                                            <Dropdown.Item href="#/action-2">İnsan
-                                                                Kaynakları</Dropdown.Item>
-                                                            <Dropdown.Item href="#/action-3">Muhasebe</Dropdown.Item>
-                                                            <Dropdown.Item href="#/action-4">Satın Alma</Dropdown.Item>
-                                                        </Dropdown.Menu>
-                                                    </Dropdown>
-                                                </FormLabel>
-                                            </Row>
-                                            <hr/>
-                                            <div style={
+                                            <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
                                                     "padding-left": "12.5px",
-                                                    "margin-bottom": "15px"
+                                                    "marginTop": "20px"
                                                 }
                                             }>
-                                                <Button as="input" type="submit" value="Kaydet" />{' '}
-                                                <Button href="/KisiGoster" style={
-                                                    {
-                                                        "margin-bottom": "5px",
-                                                        "margin-top": "5px"
-                                                    }
-                                                }>Kişileri Göster</Button>
+                                                <Form.Label column sm="4">*Ad :</Form.Label>
+                                                <Col sm="8">
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="Ad Giriniz"/>
+                                                    </InputGroup>
+                                                </Col>
+                                            </Form.Group>
 
+                                            <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
+                                                {
+                                                    "padding-left": "12.5px",
+                                                    "marginTop": "20px"
+                                                }
+                                            }>
+                                                <Form.Label column sm="4">*Soyad :</Form.Label>
+                                                <Col sm="8">
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="Soyad Giriniz"/>
+                                                    </InputGroup>
+                                                </Col>
+                                            </Form.Group>
+
+                                            <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
+                                                {
+                                                    "padding-left": "12.5px",
+                                                    "marginTop": "20px"
+                                                }
+                                            }>
+                                                <Form.Label column sm="4">*Telefon Numarası :</Form.Label>
+                                                <Col sm="8">
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="Telefon Numarası"/>
+                                                    </InputGroup>
+
+                                                </Col>
+                                            </Form.Group>
+
+                                            <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
+                                                {
+                                                    "padding-left": "12.5px",
+                                                    "marginTop": "20px"
+                                                }
+                                            }>
+                                                <Form.Label column sm="4">*TC Kimlik No :</Form.Label>
+                                                <Col sm="8">
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="TC No Giriniz"/>
+                                                    </InputGroup>
+
+                                                </Col>
+                                            </Form.Group>
+
+                                            <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" style={
+                                                {
+                                                    "padding-left": "12.5px",
+                                                    "marginTop": "20px"
+                                                }
+                                            }>
+                                                <Form.Label column sm="4">*E-mail :</Form.Label>
+                                                <Col sm="8">
+                                                    <InputGroup>
+                                                        <InputGroup.Text id="btnGroupAddon2"></InputGroup.Text>
+                                                        <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                    </InputGroup>
+                                                </Col>
+                                            </Form.Group>
+
+                                            <div style={
+                                                {
+                                                    "width": "100%"
+                                                }
+                                            }>
+                                                <div className={"container"}>
+                                                    <div className={"justify-content-md-center row"}>
+                                                        <div className={"col-lg-15 col-md-auto"}>
+                                                            <div style={
+                                                                {
+                                                                    "width": "50%",
+                                                                    "height": "100%",
+                                                                    "float": "left",
+                                                                    "marginTop": "20px"
+                                                                }
+                                                            }>
+                                                                <Form.Group as={Row} className="mb-3" style={
+                                                                    {"padding-left": "12.5px"}
+                                                                }>
+                                                                    <Form.Label as="legend" column sm={20} style={
+                                                                        {
+                                                                            "margin-bottom": "10px"
+                                                                        }
+                                                                    }>
+                                                                        *Statüsü Seçiniz :
+                                                                    </Form.Label>
+                                                                    <Col sm={15}>
+
+                                                                        <Form.Check
+                                                                            type="radio"
+                                                                            label="Çalışan"
+                                                                            name="formHorizontalRadios"
+                                                                            id="formHorizontalRadios1"
+                                                                        />
+
+                                                                        <Form.Check
+                                                                            type="radio"
+                                                                            label="Stajyer"
+                                                                            name="formHorizontalRadios"
+                                                                            id="formHorizontalRadios2"
+                                                                        />
+
+                                                                        <Form.Check
+                                                                            type="radio"
+                                                                            label="Müşteri"
+                                                                            name="formHorizontalRadios"
+                                                                            id="formHorizontalRadios3"
+                                                                            style={
+                                                                                {
+                                                                                    "marginBottom": "25px",
+
+                                                                                }
+                                                                            }
+                                                                        />
+
+                                                                    </Col>
+
+                                                                </Form.Group>
+                                                            </div>
+                                                            <div style={
+                                                                {
+                                                                    "width": "50%",
+                                                                    "height": "100%",
+                                                                    "float": "right",
+                                                                    "marginTop": "18px"
+                                                                }
+                                                            }>
+                                                                <Form.Group as={Row} className="mb-3" style={
+                                                                    {"padding-left": "75px"}
+                                                                }>
+                                                                    <Form.Label as="legend" column sm={20} style={
+                                                                        {
+                                                                            "margin-bottom": "10px"
+                                                                        }
+                                                                    }>
+                                                                        *Departman Seçiniz :
+                                                                    </Form.Label>
+                                                                    <Col sm={15}>
+                                                                        <Dropdown>
+                                                                            <Dropdown.Toggle
+                                                                                id="dropdown-button-dark-example1"
+                                                                                variant="secondary" style={
+                                                                                {
+                                                                                    "padding-left": "6px",
+                                                                                    "margin-bottom": "130px"
+
+                                                                                }
+                                                                            }>Departman Listele
+                                                                            </Dropdown.Toggle>
+
+                                                                            <Dropdown.Menu variant="dark">
+                                                                                <Dropdown.Item href="#/action-1" active>
+                                                                                    Bilgi İşlem
+                                                                                </Dropdown.Item>
+                                                                                <Dropdown.Item href="#/action-2">İnsan
+                                                                                    Kaynakları</Dropdown.Item>
+                                                                                <Dropdown.Item
+                                                                                    href="#/action-3">Muhasebe</Dropdown.Item>
+                                                                                <Dropdown.Item href="#/action-4">Satın
+                                                                                    Alma</Dropdown.Item>
+                                                                            </Dropdown.Menu>
+                                                                        </Dropdown>
+                                                                    </Col>
+
+
+                                                                </Form.Group>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <hr/>
+                                            <div className={"container"}>
+                                                <div className={"justify-content-md-center row"}>
+                                                    <div className={"col-lg-7 col-md-auto"}>
+                                                        <div style={
+                                                            {
+                                                                "padding-left": "12.5px",
+                                                                "margin-bottom": "15px"
+                                                            }
+                                                        }>
+                                                            <Button as="input" type="submit" value="Kaydet"/>{' '}
+                                                            <Button href="/KisiGoster" style={
+                                                                {
+                                                                    "margin-bottom": "5px",
+                                                                    "margin-top": "5px"
+                                                                }
+                                                            }>Kişileri Göster</Button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </Form>
                                     </div>
