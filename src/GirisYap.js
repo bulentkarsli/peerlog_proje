@@ -52,8 +52,8 @@ function GirisYap() {
                                                 <Form.Label column sm="4">*Kullanıcı Adı :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt/></InputGroup.Text>
-                                                        <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt  style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="email" placeholder="E-posta Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -68,8 +68,8 @@ function GirisYap() {
                                                 <Form.Label column sm="4">*Şifre :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey/></InputGroup.Text>
-                                                        <Form.Control type="password" placeholder="Şifre Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey  style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="password" placeholder="Şifre Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>

@@ -60,8 +60,8 @@ function SifreGetir() {
                                             <Form.Group className="mb-3" controlId="exampleForm.ControlInput1">
                                                 <Form.Label>*E-posta (Kullanıcı Adı)</Form.Label>
                                                 <InputGroup>
-                                                    <InputGroup.Text id="btnGroupAddon2"><FaAt/></InputGroup.Text>
-                                                    <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                    <InputGroup.Text id="btnGroupAddon2"><FaAt style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                    <Form.Control type="email" placeholder="E-posta Giriniz" style={{"opacity":"0.5"}}/>
                                                 </InputGroup>
                                             </Form.Group>
                                             <br/>

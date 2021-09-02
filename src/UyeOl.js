@@ -53,8 +53,8 @@ function UyeOl() {
                                                 <Form.Label column sm="4">*Ad :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill /></InputGroup.Text>
-                                                        <Form.Control type="text" placeholder="Ad Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill  style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="Ad Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
 
                                                 </Col>
@@ -69,8 +69,8 @@ function UyeOl() {
                                                 <Form.Label column sm="4">*Soyad :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill /></InputGroup.Text>
-                                                        <Form.Control type="text" placeholder="Soyad Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="Soyad Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -85,8 +85,8 @@ function UyeOl() {
                                                 <Form.Label column sm="4">*TC Kimlik No :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill /></InputGroup.Text>
-                                                        <Form.Control type="text" placeholder="TC Kimlik No Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="text" placeholder="TC Kimlik No Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -100,8 +100,8 @@ function UyeOl() {
                                                 <Form.Label column sm="4">*E-mail :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt /></InputGroup.Text>
-                                                        <Form.Control type="email" placeholder="E-posta Giriniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="email" placeholder="E-posta Giriniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -116,8 +116,8 @@ function UyeOl() {
                                                 <Form.Label column sm="4">*Şifre :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey /></InputGroup.Text>
-                                                        <Form.Control type="password" placeholder="Şifre Belirleyiniz"/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="password" placeholder="Şifre Belirleyiniz" style={{"opacity":"0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -131,8 +131,8 @@ function UyeOl() {
                                                         }>
                                                 <Form.Label column sm="4">*Şifre :</Form.Label>
                                                 <Col sm="8"><InputGroup>
-                                                    <InputGroup.Text id="btnGroupAddon2"><FaKey /></InputGroup.Text>
-                                                    <Form.Control type="password" placeholder="Şifrenizi Tekrar Giriniz"/>
+                                                    <InputGroup.Text id="btnGroupAddon2"><FaKey style={{"opacity":"0.5"}}/></InputGroup.Text>
+                                                    <Form.Control type="password" placeholder="Şifrenizi Tekrar Giriniz" style={{"opacity":"0.5"}}/>
                                                 </InputGroup>
                                                 </Col>
                                             </Form.Group>
