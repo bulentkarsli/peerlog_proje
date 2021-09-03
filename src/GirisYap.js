@@ -85,31 +85,25 @@ function GirisYap() {
                                             </Form.Group>
                                             <br/>
                                             <hr/>
-                                            <div className={"container"}>
-                                                <div className={"justify-content-md-center row"}>
-                                                    <div className={"col-lg-15 col-md-auto"}>
-                                                        <Link to="/KisiGoster">
-                                                            <Button type={"submit"} variant="primary" style={
-                                                                {
-                                                                    "margin-bottom": "20px",
-                                                                    "margin-top": "5px",
-                                                                    "margin-right": "110px"
-                                                                }
-                                                            }>Giriş Yap</Button>{' '}
-                                                        </Link>
-                                                        <Link to="/SifreGetir">
-                                                            <Button type={"button"} variant="primary" style={
-                                                                {
-                                                                    "margin-bottom": "20px",
-                                                                    "margin-top": "5px",
-                                                                    "background-color": "#ffa800",
-                                                                    "border-color": "#ffa800"
-                                                                }
-                                                            }>Şifremi Unuttum</Button>{' '}
-                                                        </Link>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <Link to="/KisiGoster">
+                                                <Button type={"submit"} variant="primary" style={
+                                                    {
+                                                        "margin-bottom": "20px",
+                                                        "margin-top": "5px"
+                                                    }
+                                                }>Giriş Yap</Button>{' '}
+                                            </Link>
+                                            <Link to="/SifreGetir">
+                                                <Button type={"button"} variant="primary" style={
+                                                    {
+                                                        "margin-bottom": "20px",
+                                                        "margin-top": "5px",
+                                                        "background-color": "#ffa800",
+                                                        "border-color": "#ffa800",
+                                                        "float": "right"
+                                                    }
+                                                }>Şifremi Unuttum</Button>{' '}
+                                            </Link>
                                         </Form>
                                     </div>
                                 </div>

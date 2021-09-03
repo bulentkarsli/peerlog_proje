@@ -38,7 +38,7 @@ function UyeOl() {
                                         "padding-left": "10px",
                                         "marginTop": "10px"
                                     }
-                                }>Üyelik Alanı
+                                }>Yeni Hesap Aç
                                 </div>
                             </div>
                             <div className={"container"}>
@@ -131,21 +131,28 @@ function UyeOl() {
                                                 </InputGroup>
                                                 </Col>
                                             </Form.Group>
-                                        </Form>
-                                        <br/><hr/>
-                                    </div>
-                                </div>
-                            </div>
-                            <div className={"container"}>
-                                <div className={"justify-content-md-center row"}>
-                                    <div className={"col-lg-20 col-md-auto"}>
-                                        <Link to="/">
-                                            <Button type="submit" style={
+                                            <br/><hr/>
+                                            <Link to="/">
+                                                <Button type="submit" variant="primary" style={
+                                                    {
+                                                        "margin-bottom": "20px",
+                                                        "margin-top": "5px"
+                                                        // "color": "#fff",
+                                                        // "background-color": "#6993ff",
+                                                        // "border-color": "#6993ff"
+                                                    }
+                                                }>Kaydet</Button>
+                                            </Link>
+                                            <Button href="/" type="button" variant="primary" style={
                                                 {
-                                                    "margin-bottom": "15px"
+                                                    "margin-bottom": "20px",
+                                                    "margin-top": "5px",
+                                                    "color": "#7e8299",
+                                                    "border-color": "#7e8299",
+                                                    "float": "right"
                                                 }
-                                            }>Üyeliği Tamamla</Button>
-                                        </Link>
+                                            }>Vazgeç</Button>
+                                        </Form>
                                     </div>
                                 </div>
                             </div>

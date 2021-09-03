@@ -241,35 +241,20 @@ function KisiEkle() {
                                                                             </Dropdown.Menu>
                                                                         </Dropdown>
                                                                     </Col>
-
-
                                                                 </Form.Group>
                                                             </div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <hr/>
-                                            <div className={"container"}>
-                                                <div className={"justify-content-md-center row"}>
-                                                    <div className={"col-lg-7 col-md-auto"}>
-                                                        <div style={
-                                                            {
-                                                                "padding-left": "12.5px",
-                                                                "margin-bottom": "15px"
-                                                            }
-                                                        }>
-                                                            <Button as="input" type="submit" value="Kaydet"/>{' '}
-                                                            <Button href="/KisiGoster" style={
-                                                                {
-                                                                    "margin-bottom": "5px",
-                                                                    "margin-top": "5px"
-                                                                }
-                                                            }>Kişileri Göster</Button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            <br/><hr/>
+                                            <Button as="input" type="submit" value="Kaydet"/>{' '}
+                                            <Button href="/KisiGoster" style={
+                                                {
+                                                    "margin-bottom": "15px",
+                                                    "float":"right"
+                                                }
+                                            }>Kişileri Göster</Button>
                                         </Form>
                                     </div>
                                 </div>

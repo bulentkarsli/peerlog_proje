@@ -85,7 +85,8 @@ function SifreGetir() {
                                                     "margin-bottom": "20px",
                                                     "margin-top": "5px",
                                                     "color": "#7e8299",
-                                                    "border-color": "#7e8299"
+                                                    "border-color": "#7e8299",
+                                                    "float": "right"
                                                 }
                                             }>Vazgeç</Button>
                                         </Form>
