@@ -38,7 +38,13 @@ function KisiGoster() {
                             {"background-color": "white"}
                         }>
                             <div className="bg-secondary card-header">
-                                <div className="text-white card-title h5" style={{"text-align": "center"}}>Kayıtlı
+                                <div className="text-white card-title h5"
+                                     style={
+                                         {
+                                             "padding-left": "10px",
+                                             "marginTop": "10px"
+                                         }
+                                     }>Kayıtlı
                                     Kişiler
                                 </div>
                             </div>

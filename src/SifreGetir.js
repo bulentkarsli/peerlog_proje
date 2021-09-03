@@ -35,7 +35,12 @@ function SifreGetir() {
                         }>
                             <div className="bg-secondary card-header">
                                 <div className="text-white card-title h5"
-                                     style={{"text-align": "center"}}>Şifre Değiştirme
+                                     style={
+                                         {
+                                             "padding-left": "10px",
+                                             "marginTop": "10px"
+                                         }
+                                     }>Şifre Değiştirme
                                 </div>
                             </div>
 

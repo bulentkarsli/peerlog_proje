@@ -52,7 +52,13 @@ function KisiEkle() {
                             {"background-color": "white"}
                         }>
                             <div className="bg-secondary card-header">
-                                <div className="text-white card-title h5" style={{"text-align": "center"}}>Kişi Ekleme
+                                <div className="text-white card-title h5"
+                                     style={
+                                         {
+                                             "padding-left": "10px",
+                                             "marginTop": "10px"
+                                         }
+                                     }>Kişi Ekleme
                                     Alanı
                                 </div>
                             </div>
@@ -64,7 +70,6 @@ function KisiEkle() {
                                         }>
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -79,7 +84,6 @@ function KisiEkle() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -94,7 +98,6 @@ function KisiEkle() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -110,7 +113,6 @@ function KisiEkle() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -126,7 +128,6 @@ function KisiEkle() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -155,9 +156,7 @@ function KisiEkle() {
                                                                     "marginTop": "20px"
                                                                 }
                                                             }>
-                                                                <Form.Group as={Row} className="mb-3" style={
-                                                                    {"padding-left": "12.5px"}
-                                                                }>
+                                                                <Form.Group as={Row} className="mb-3">
                                                                     <Form.Label as="legend" column sm={20} style={
                                                                         {
                                                                             "margin-bottom": "10px"

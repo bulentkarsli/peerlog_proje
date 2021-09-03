@@ -35,7 +35,8 @@ function UyeOl() {
                             <div className="bg-secondary card-header">
                                 <div className="text-white card-title h5" style={
                                     {
-                                        "text-align": "center"
+                                        "padding-left": "10px",
+                                        "marginTop": "10px"
                                     }
                                 }>Üyelik Alanı
                                 </div>
@@ -46,7 +47,6 @@ function UyeOl() {
                                         <Form>
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -62,7 +62,6 @@ function UyeOl() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formGridAddress2" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -78,7 +77,6 @@ function UyeOl() {
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword"
                                                         style={
                                                             {
-                                                                "padding-left": "12.5px",
                                                                 "marginTop": "20px"
                                                             }
                                                         }>
@@ -93,7 +91,6 @@ function UyeOl() {
 
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextEmail" style={
                                                 {
-                                                    "padding-left": "12.5px",
                                                     "marginTop": "20px"
                                                 }
                                             }>
@@ -109,7 +106,6 @@ function UyeOl() {
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword"
                                                         style={
                                                             {
-                                                                "padding-left": "12.5px",
                                                                 "marginTop": "20px"
                                                             }
                                                         }>
@@ -125,7 +121,6 @@ function UyeOl() {
                                             <Form.Group as={Row} className="mb-3" controlId="formPlaintextPassword"
                                                         style={
                                                             {
-                                                                "padding-left": "12.5px",
                                                                 "marginTop": "20px"
                                                             }
                                                         }>

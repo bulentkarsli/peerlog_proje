@@ -4,6 +4,7 @@ import {Button, Card, Col, Container, Form, InputGroup, Navbar, Row} from "react
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {FaAt, FaKey} from "react-icons/fa";
 import {BsFillExclamationSquareFill} from "react-icons/bs";
+import CookieConsent from "react-cookie-consent";
 
 function GirisYap() {
 
@@ -17,7 +18,7 @@ function GirisYap() {
                         <Navbar.Text>
                             <a href="/UyeOl" style={
                                 {
-                                    "padding": "20px",
+                                    "padding": "20px"
                                 }
                             }>Üye Ol</a>
                         </Navbar.Text>
@@ -35,7 +36,12 @@ function GirisYap() {
                         }>
                             <div className="bg-secondary card-header">
                                 <div className="text-white card-title h5"
-                                     style={{"text-align": "center"}}>Giriş Yapınız
+                                     style={
+                                         {
+                                             "padding-left": "10px",
+                                             "marginTop": "10px"
+                                         }
+                                     }>Giriş Yapınız
                                 </div>
                             </div>
 
@@ -52,8 +58,10 @@ function GirisYap() {
                                                 <Form.Label column sm="4">*Kullanıcı Adı :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt  style={{"opacity":"0.5"}}/></InputGroup.Text>
-                                                        <Form.Control type="email" placeholder="E-posta Giriniz" style={{"opacity":"0.5"}}/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaAt
+                                                            style={{"opacity": "0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="email" placeholder="E-posta Giriniz"
+                                                                      style={{"opacity": "0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -68,8 +76,10 @@ function GirisYap() {
                                                 <Form.Label column sm="4">*Şifre :</Form.Label>
                                                 <Col sm="8">
                                                     <InputGroup>
-                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey  style={{"opacity":"0.5"}}/></InputGroup.Text>
-                                                        <Form.Control type="password" placeholder="Şifre Giriniz" style={{"opacity":"0.5"}}/>
+                                                        <InputGroup.Text id="btnGroupAddon2"><FaKey
+                                                            style={{"opacity": "0.5"}}/></InputGroup.Text>
+                                                        <Form.Control type="password" placeholder="Şifre Giriniz"
+                                                                      style={{"opacity": "0.5"}}/>
                                                     </InputGroup>
                                                 </Col>
                                             </Form.Group>
@@ -92,7 +102,8 @@ function GirisYap() {
                                                                 {
                                                                     "margin-bottom": "20px",
                                                                     "margin-top": "5px",
-                                                                    "background-color": "#ffa800"
+                                                                    "background-color": "#ffa800",
+                                                                    "border-color": "#ffa800"
                                                                 }
                                                             }>Şifremi Unuttum</Button>{' '}
                                                         </Link>
