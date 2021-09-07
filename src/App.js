@@ -1,18 +1,23 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import React, { useState } from 'react';
-import KisiEkle from "./KisiEkle"
-import Yetkili from "./GirisYap";
+import React, {Component, useState} from 'react';
 import UyeOl from "./UyeOl";
+import KisiEkle from "./KisiEkle";
+import GirisYap from "./GirisYap";
+import SifreGetir from "./SifreGetir";
+import KisiGoster from "./KisiGoster";
 
-function App() {
-  return (
-    <div className="App">
+class App extends Component {
 
-      <UyeOl />
+    render() {
+        return (
+            <div className="App">
 
-    </div>
-  );
+                <UyeOl/>
+
+            </div>
+        );
+    }
 }
 
 export default App;
