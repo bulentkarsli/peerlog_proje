@@ -3,11 +3,16 @@ import {Link} from "react-router-dom";
 import {Button, Card, Col, Container, Form, InputGroup, Navbar, Row} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {FaAt, FaKey} from "react-icons/fa";
+import {bindActionCreators} from "@reduxjs/toolkit";
+import {withRouter} from "react-router-dom";
+import {connect} from "react-redux";
 
 class GirisYap extends Component {
 
-    state={
-
+    maxLengthCheck = (object) => {
+        if (object.target.value.length > object.target.maxLength) {
+            object.target.value = object.target.value.slice(0, object.target.maxLength)
+        }
     }
 
     render() {
@@ -64,6 +69,7 @@ class GirisYap extends Component {
                                                             <InputGroup.Text id="btnGroupAddon2"><FaAt
                                                                 style={{"opacity": "0.5"}}/></InputGroup.Text>
                                                             <Form.Control type="email" placeholder="E-posta Giriniz"
+                                                                          id="adi"
                                                                           style={{"opacity": "0.5"}}/>
                                                         </InputGroup>
                                                     </Col>
@@ -81,15 +87,21 @@ class GirisYap extends Component {
                                                         <InputGroup>
                                                             <InputGroup.Text id="btnGroupAddon2"><FaKey
                                                                 style={{"opacity": "0.5"}}/></InputGroup.Text>
-                                                            <Form.Control type="password" placeholder="Şifre Giriniz"
-                                                                          style={{"opacity": "0.5"}}/>
+                                                            <Form.Control
+                                                                type="password"
+                                                                placeholder="Şifre Giriniz"
+                                                                id="parola"
+                                                                style={{"opacity": "0.5"}}
+                                                                onInput={this.maxLengthCheck}
+                                                                maxLength="10"
+                                                            />
                                                         </InputGroup>
                                                     </Col>
                                                 </Form.Group>
                                                 <br/>
                                                 <hr/>
                                                 <Link to="/KisiGoster">
-                                                    <Button type={"submit"} variant="primary" style={
+                                                    <Button type="submit" variant="primary" style={
                                                         {
                                                             "margin-bottom": "20px",
                                                             "margin-top": "5px"
@@ -97,7 +109,7 @@ class GirisYap extends Component {
                                                     }>Giriş Yap</Button>{' '}
                                                 </Link>
                                                 <Link to="/SifreGetir">
-                                                    <Button type={"button"} variant="primary" style={
+                                                    <Button type="button" variant="primary" style={
                                                         {
                                                             "margin-bottom": "20px",
                                                             "margin-top": "5px",

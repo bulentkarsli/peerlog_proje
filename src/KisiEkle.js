@@ -15,8 +15,13 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BsFillExclamationSquareFill} from "react-icons/bs";
 import {FaAt, FaPhone} from "react-icons/fa";
 
-
 class KisiEkle extends Component {
+
+    maxLengthCheck = (object) => {
+        if (object.target.value.length > object.target.maxLength) {
+            object.target.value = object.target.value.slice(0, object.target.maxLength)
+        }
+    }
 
     render() {
         return (
@@ -104,8 +109,8 @@ class KisiEkle extends Component {
                                                     <Form.Label column sm="4">*Telefon Numarası :</Form.Label>
                                                     <Col sm="8">
                                                         <InputGroup>
-                                                            <InputGroup.Text id="btnGroupAddon2"><FaPhone style={{"opacity":"0.5"}}/></InputGroup.Text>
-                                                            <Form.Control type="text" placeholder="Telefon Numarası" style={{"opacity":"0.5"}}/>
+                                                            <InputGroup.Text id="btnGroupAddon2"><FaPhone style={{"opacity":"0.5"}} onChange={this.handleChangeInput} maxLength={11}/></InputGroup.Text>
+                                                            <Form.Control type="number" placeholder="+90 ( _ _ _ ) _ _ _   _ _   _ _" style={{"opacity":"0.5"}} maxLength = "10" onInput={this.maxLengthCheck}/>
                                                         </InputGroup>
 
                                                     </Col>
@@ -120,7 +125,7 @@ class KisiEkle extends Component {
                                                     <Col sm="8">
                                                         <InputGroup>
                                                             <InputGroup.Text id="btnGroupAddon2"><BsFillExclamationSquareFill style={{"opacity":"0.5"}}/></InputGroup.Text>
-                                                            <Form.Control type="text" placeholder="TC No Giriniz" style={{"opacity":"0.5"}}/>
+                                                            <Form.Control type="number" placeholder="TC No Giriniz" style={{"opacity":"0.5"}} maxLength = "11" onInput={this.maxLengthCheck}/>
                                                         </InputGroup>
 
                                                     </Col>

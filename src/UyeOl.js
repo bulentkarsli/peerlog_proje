@@ -5,6 +5,11 @@ import {FaAt, FaKey} from "react-icons/fa";
 import {BsFillExclamationSquareFill} from "react-icons/bs";
 
 class UyeOl extends Component{
+
+    ButtonAlert() {
+        alert("Üyeliğiniz Tamamlanmıştır. Aktivasyon İçin E-postanıza Gönderilen Bağlantıyı Takip Ediniz.");
+    }
+
     render() {
         return (
             <div>
@@ -134,7 +139,7 @@ class UyeOl extends Component{
                                                 </Form.Group>
                                                 <br/><hr/>
                                                 <Link to="/">
-                                                    <Button type="submit" variant="primary" style={
+                                                    <Button onClick={this.ButtonAlert} type="submit" variant="primary" style={
                                                         {
                                                             "margin-bottom": "20px",
                                                             "margin-top": "5px"

@@ -7,6 +7,7 @@ import {Link} from "react-router-dom";
 class KisiGoster extends Component {
 
     render() {
+
         return (
             <div>
                 <Navbar bg="primary" variant="dark">
@@ -34,7 +35,7 @@ class KisiGoster extends Component {
                 </Navbar>
                 <div className={"container"}>
                     <div className={"justify-content-md-center row"}>
-                        <div className={"col-lg-10 col-md-auto"}>
+                        <div className={"col-lg-12 col-md-auto"}>
                             <Card className={" m-5"} style={
                                 {"background-color": "white"}
                             }>
@@ -52,17 +53,21 @@ class KisiGoster extends Component {
                                 <Table striped bordered hover size="sm" style={{"marginBottom":"30px"}}>
                                     <thead>
                                     <tr>
-                                        <th>#</th>
-                                        <th>Ad</th>
-                                        <th>Soyad</th>
-                                        <th>TC No</th>
-                                        <th>Cep No</th>
-                                        <th>Mail</th>
+                                        <th width="25px">#</th>
+                                        <th width="175px">Ad</th>
+                                        <th width="175px">Soyad</th>
+                                        <th width="175px">TC Kimlik No</th>
+                                        <th width="175px">Telefon</th>
+                                        <th width="175px">Mail</th>
+                                        <th width="175px">Statü</th>
+                                        <th width="175px">Departman</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>1</td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -76,9 +81,13 @@ class KisiGoster extends Component {
                                         <td></td>
                                         <td></td>
                                         <td></td>
+                                        <td></td>
+                                        <td></td>
                                     </tr>
                                     <tr>
                                         <td>3</td>
+                                        <td></td>
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                         <td></td>

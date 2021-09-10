@@ -3,9 +3,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Alert, Button, Card, Container, Form, InputGroup, Navbar} from "react-bootstrap";
 import { AiOutlinePushpin } from "react-icons/ai";
 import {FaAt} from "react-icons/fa";
+import {Link} from "react-router-dom";
 
 
 class SifreGetir extends Component {
+
+    ButtonAlert() {
+        alert("Yeni Şifre Oluşturmak İçin E-postanıza Gönderilen Bağlantıyı Takip Ediniz.");
+    }
 
     render() {
         return (
@@ -73,15 +78,17 @@ class SifreGetir extends Component {
                                                 </Form.Group>
                                                 <br/>
                                                 <hr/>
-                                                <Button type="submit" variant="primary" style={
-                                                    {
-                                                        "margin-bottom": "20px",
-                                                        "margin-top": "5px"
-                                                        // "color": "#fff",
-                                                        // "background-color": "#6993ff",
-                                                        // "border-color": "#6993ff"
-                                                    }
-                                                }>Gönder</Button>{' '}
+                                                <Link to="/">
+                                                    <Button onClick={this.ButtonAlert} type="submit" variant="primary" style={
+                                                        {
+                                                            "margin-bottom": "20px",
+                                                            "margin-top": "5px"
+                                                            // "color": "#fff",
+                                                            // "background-color": "#6993ff",
+                                                            // "border-color": "#6993ff"
+                                                        }
+                                                    }>Gönder</Button>
+                                                </Link>
                                                 <Button href="/" type="button" variant="primary" style={
                                                     {
                                                         "margin-bottom": "20px",
