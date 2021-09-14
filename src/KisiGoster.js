@@ -2,12 +2,21 @@ import React, {Component} from "react";
 import {Button, Card, Container, Nav, Navbar, Table} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Link} from "react-router-dom";
-
+import Client from "./Client";
+import {bindActionCreators} from "redux";
+import * as kisiActions from "./redux/actions/KisiActions";
+import {connect} from "react-redux";
 
 class KisiGoster extends Component {
 
-    render() {
+    constructor(props) {
+        super(props);
+        this.client = new Client();
+        this.state = {kisi: []};
+        this.client.kisi().then(k => this.setState({kisi: k}));
+    }
 
+    render() {
         return (
             <div>
                 <Navbar bg="primary" variant="dark">
@@ -50,7 +59,7 @@ class KisiGoster extends Component {
                                         Kişiler
                                     </div>
                                 </div>
-                                <Table striped bordered hover size="sm" style={{"marginBottom":"30px"}}>
+                                <Table striped bordered hover size="sm" style={{"marginBottom": "30px"}}>
                                     <thead>
                                     <tr>
                                         <th width="25px">#</th>
@@ -64,28 +73,9 @@ class KisiGoster extends Component {
                                     </tr>
                                     </thead>
                                     <tbody>
+
                                     <tr>
                                         <td>1</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>2</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
-                                    <tr>
-                                        <td>3</td>
                                         <td></td>
                                         <td></td>
                                         <td></td>
@@ -121,5 +111,22 @@ class KisiGoster extends Component {
         );
     }
 }
+function mapDispatchToProps(dispatch) {
+    return {
+        actions: {
+            getAllKisiler: bindActionCreators(kisiActions.getAllKisiler, dispatch),
+        }
+    }
+}
 
-export default KisiGoster;
+function mapStateToProps(state) {
+    return {
+        blogPosts: state.kisiReducer.kisiler,
+    }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(KisiGoster);
+
+
+
+// export default KisiGoster;

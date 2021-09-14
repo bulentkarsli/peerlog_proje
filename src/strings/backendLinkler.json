@@ -1,0 +1,7 @@
+{
+  "backEndEndPoint": "/api/",
+  "kurumKurulus": "kurum-kurulus/",
+
+  "kisi": "kisi/",
+  "tumunuGetir": "tumunu-getir"
+}

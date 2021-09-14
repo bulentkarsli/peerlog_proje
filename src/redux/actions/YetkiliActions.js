@@ -1,5 +1,5 @@
 import * as actionTypes from "./actionTypes"
-import linkler from "../../strings/backendLinkler"
+import linkler from "../../strings/backendLinkler.json"
 import * as commonActions from "./commonActions"
 
 const yetkiliLink = linkler.backEndEndPoint + linkler.kutuphaneKisi;
