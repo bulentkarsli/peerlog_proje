@@ -11,11 +11,12 @@ export default function kisiReducer(state = initialState, action) {
                 ...state,
                 kisi: action.payload
             };
-        case actionTypes.GET_KISILER_SUCCESS:
+        case actionTypes.GET_KISILER_SUCCESS: {
             return {
                 ...state,
                 kisiler: action.payload
             };
+        }
         case actionTypes.DELETE_KISI_SUCCESS:
             return {
                 ...state,

@@ -34,24 +34,4 @@ class App extends Component {
     }
 }
 
-// function GirisYap() {
-//     return <h2>Home</h2>;
-// }
-//
-// function UyeOl() {
-//     return <h2>About</h2>;
-// }
-//
-// function KisiEkle() {
-//     return <h2>Users</h2>;
-// }
-//
-// function KisiGoster() {
-//     return <h2>Users</h2>;
-// }
-//
-// function SifreGetir() {
-//     return <h2>Users</h2>;
-// }
-
 export default App;

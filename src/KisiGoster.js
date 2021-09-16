@@ -6,6 +6,7 @@ import Client from "./Client";
 import {bindActionCreators} from "redux";
 import * as kisiActions from "./redux/actions/KisiActions";
 import {connect} from "react-redux";
+import {AiOutlineArrowRight} from "react-icons/all";
 
 class KisiGoster extends Component {
 
@@ -14,6 +15,15 @@ class KisiGoster extends Component {
         this.client = new Client();
         this.state = {kisi: []};
         this.client.kisi().then(k => this.setState({kisi: k}));
+    }
+    componentDidMount() {
+        this.props.actions.getAllKisiler();
+    }
+
+    componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS) {
+        // if((prevProps.kisiler !== this.props.kisiler) && this.props.kisiler) {
+        //     console.log(this.props.kisiler)
+        // }
     }
 
     render() {
@@ -31,7 +41,7 @@ class KisiGoster extends Component {
                             <Navbar.Text>
                                 <a href="/UyeOl" style={
                                     {
-                                        "padding": "20px",
+                                        padding: "20px",
 
                                     }
                                 }>Üye Ol</a>
@@ -46,20 +56,20 @@ class KisiGoster extends Component {
                     <div className={"justify-content-md-center row"}>
                         <div className={"col-lg-12 col-md-auto"}>
                             <Card className={" m-5"} style={
-                                {"background-color": "white"}
+                                {backgroundColor: "white"}
                             }>
                                 <div className="bg-secondary card-header">
                                     <div className="text-white card-title h5"
                                          style={
                                              {
-                                                 "padding-left": "10px",
-                                                 "marginTop": "10px"
+                                                 paddingLeft: "10px",
+                                                 marginTop: "10px"
                                              }
                                          }>Kayıtlı
                                         Kişiler
                                     </div>
                                 </div>
-                                <Table striped bordered hover size="sm" style={{"marginBottom": "30px"}}>
+                                <Table striped bordered hover size="sm" style={{marginBottom: "30px"}}>
                                     <thead>
                                     <tr>
                                         <th width="25px">#</th>
@@ -73,17 +83,18 @@ class KisiGoster extends Component {
                                     </tr>
                                     </thead>
                                     <tbody>
-
-                                    <tr>
-                                        <td>1</td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                                    {this.props.kisiler?.map((kisi)=>{
+                                        return <tr key={kisi.id}>
+                                            <td><AiOutlineArrowRight/></td>
+                                            <td>{kisi.adi}</td>
+                                            <td>{kisi.soyadi}</td>
+                                            <td>{kisi.tcKimlikNo}</td>
+                                            <td>{kisi.cepTel}</td>
+                                            <td>{kisi.mail}</td>
+                                            <td>{kisi.statu}</td>
+                                            <td>{kisi.departman}</td>
+                                        </tr>;
+                                    })}
                                     </tbody>
                                 </Table>
                                 <div className={"container"}>
@@ -93,7 +104,7 @@ class KisiGoster extends Component {
                                             <Link to="/KisiEkle">
                                                 <Button type={"submit"} style={
                                                     {
-                                                        "margin-bottom": "15px",
+                                                        marginBottom: "15px",
                                                     }
                                                 }>
                                                     Yeni Kişi Ekle
@@ -121,7 +132,7 @@ function mapDispatchToProps(dispatch) {
 
 function mapStateToProps(state) {
     return {
-        blogPosts: state.kisiReducer.kisiler,
+        kisiler: state.kisiReducer.kisiler,
     }
 }
 
