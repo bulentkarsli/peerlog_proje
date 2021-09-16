@@ -4,7 +4,6 @@ import {
     Card,
     Col,
     Container,
-    Dropdown, DropdownButton,
     Form,
     InputGroup,
     Nav,
@@ -18,8 +17,6 @@ import * as kisiActions from "./redux/actions/KisiActions";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 import Client from "./Client";
-import {addKisi} from "./redux/actions/KisiActions";
-import data from "bootstrap/js/src/dom/data";
 
 class KisiEkle extends Component {
 
@@ -297,7 +294,7 @@ class KisiEkle extends Component {
                                                                             }
                                                                         })
                                                                         }
-                                                                        />
+                                                                    />
                                                                 </Col>
                                                             </div>
                                                         </div>
@@ -317,7 +314,7 @@ class KisiEkle extends Component {
                                                                         type="radio"
                                                                         label="Bilgi İşlem"
                                                                         name="departman"
-                                                                        id="formHorizontalRadios1"
+                                                                        id="formHorizontalRadios4"
                                                                         value={this.state.kisi.departman}
                                                                         onChange={() => this.setState({
                                                                             ...this.state,
@@ -331,14 +328,14 @@ class KisiEkle extends Component {
                                                                     <Form.Check
                                                                         type="radio"
                                                                         label="İnsan Kaynakları"
-                                                                        name="statu"
-                                                                        id="formHorizontalRadios2"
+                                                                        name="departman"
+                                                                        id="formHorizontalRadios5"
                                                                         value={this.state.kisi.departman}
                                                                         onChange={() => this.setState({
                                                                             ...this.state,
                                                                             kisi: {
                                                                                 ...this.state.kisi,
-                                                                                departman: "Stajyer"
+                                                                                departman: "InsanKaynaklari"
                                                                             }
                                                                         })
                                                                         }
@@ -347,7 +344,7 @@ class KisiEkle extends Component {
                                                                         type="radio"
                                                                         label="Muhasebe"
                                                                         name="departman"
-                                                                        id="formHorizontalRadios3"
+                                                                        id="formHorizontalRadios6"
                                                                         value={this.state.kisi.departman}
                                                                         onChange={() => this.setState({
                                                                             ...this.state,
@@ -361,8 +358,8 @@ class KisiEkle extends Component {
                                                                     <Form.Check
                                                                         type="radio"
                                                                         label="Satın Alma"
-                                                                        name="statu"
-                                                                        id="formHorizontalRadios3"
+                                                                        name="departman"
+                                                                        id="formHorizontalRadios7"
                                                                         value={this.state.kisi.departman}
                                                                         onChange={() => this.setState({
                                                                             ...this.state,

@@ -3,5 +3,6 @@
   "kisi": "kisi/",
   "aktifKisi": "aktifKisi/",
   "tumunuGetir": "tumunu-getir",
-  "kaydet": "kaydet"
+  "kaydet": "kaydet",
+  "sil": "sil"
 }

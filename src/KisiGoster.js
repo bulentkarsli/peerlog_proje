@@ -6,18 +6,32 @@ import Client from "./Client";
 import {bindActionCreators} from "redux";
 import * as kisiActions from "./redux/actions/KisiActions";
 import {connect} from "react-redux";
-import {AiOutlineArrowRight} from "react-icons/all";
+import {AiFillDelete, AiOutlineArrowRight, GrUpdate} from "react-icons/all";
 
 class KisiGoster extends Component {
 
     constructor(props) {
         super(props);
         this.client = new Client();
-        this.state = {kisi: []};
+        this.state = {
+            kisi: [],
+            // kisi: {
+            //     id: "",
+            //     adi: "",
+            //     soyadi: "",
+            //     cepTel: "",
+            //     mail: "",
+            //     tcKimlikNo: "",
+            //     statu: "",
+            //     departman: ""
+            // }
+        };
         this.client.kisi().then(k => this.setState({kisi: k}));
     }
+
     componentDidMount() {
         this.props.actions.getAllKisiler();
+        // this.props.actions.deleteKisi();
     }
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS) {
@@ -25,6 +39,11 @@ class KisiGoster extends Component {
         //     console.log(this.props.kisiler)
         // }
     }
+
+    // kisiSil = () => {
+    //     console.log(this.props.kisiler);
+    //     this.props.actions.deleteKisi(this.state.kisiler)
+    // }
 
     render() {
         return (
@@ -72,7 +91,7 @@ class KisiGoster extends Component {
                                 <Table striped bordered hover size="sm" style={{marginBottom: "30px"}}>
                                     <thead>
                                     <tr>
-                                        <th width="25px">#</th>
+                                        <th>#</th>
                                         <th width="175px">Ad</th>
                                         <th width="175px">Soyad</th>
                                         <th width="175px">TC Kimlik No</th>
@@ -80,10 +99,12 @@ class KisiGoster extends Component {
                                         <th width="175px">Mail</th>
                                         <th width="175px">Statü</th>
                                         <th width="175px">Departman</th>
+                                        <th style={{opacity:"0.5"}}></th>
+                                        <th style={{opacity:"0.5"}}></th>
                                     </tr>
                                     </thead>
                                     <tbody>
-                                    {this.props.kisiler?.map((kisi)=>{
+                                    {this.props.kisiler?.map((kisi) => {
                                         return <tr key={kisi.id}>
                                             <td><AiOutlineArrowRight/></td>
                                             <td>{kisi.adi}</td>
@@ -93,6 +114,26 @@ class KisiGoster extends Component {
                                             <td>{kisi.mail}</td>
                                             <td>{kisi.statu}</td>
                                             <td>{kisi.departman}</td>
+                                            <td>
+                                                <Button
+                                                        style={
+                                                            {
+                                                                backgroundColor: "#ffa800",
+                                                                borderColor: "#ffa800"
+                                                                //#6c757d
+                                                            }
+                                                        }
+                                                ><GrUpdate/></Button>
+                                            </td>
+                                            <td>
+                                                <Button //onClick={() => this.kisiSil()}
+                                                    style={
+                                                        {
+                                                            backgroundColor: "#6c757d",
+                                                            borderColor: "#6c757d"
+                                                        }
+                                                    }><AiFillDelete/></Button>
+                                            </td>
                                         </tr>;
                                     })}
                                     </tbody>
@@ -122,10 +163,12 @@ class KisiGoster extends Component {
         );
     }
 }
+
 function mapDispatchToProps(dispatch) {
     return {
         actions: {
             getAllKisiler: bindActionCreators(kisiActions.getAllKisiler, dispatch),
+            // deleteKisi: bindActionCreators(kisiActions.deleteKisi, dispatch),
         }
     }
 }
@@ -137,7 +180,6 @@ function mapStateToProps(state) {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(KisiGoster);
-
 
 
 // export default KisiGoster;

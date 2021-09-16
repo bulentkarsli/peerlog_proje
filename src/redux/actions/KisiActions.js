@@ -5,6 +5,7 @@ const kisiLink = linkler.backEndEndPoint + linkler.kisi;
 const aktifKisiLink = linkler.backEndEndPoint + linkler.aktifKisi;
 const tumunuGetirLink = kisiLink + linkler.tumunuGetir;
 const kaydetLink = aktifKisiLink + linkler.kaydet;
+const silLink = kisiLink + linkler.sil;
 // const idyeGoreGetirLink = kisiLink + linkler.idyeGoreGetir;
 // const updateLink = kisiLink + linkler.guncelle;
 // const deleteLink = kisiLink + linkler.sil;
@@ -19,6 +20,10 @@ export function getKisilerSuccess(kisiler) {
 export function addKisiSuccess(kisi) {
     return {type: actionTypes.ADD_KISI_SUCCESS, payload: kisi}
 }
+
+// export function deleteKisiSuccess(kisi) {
+//     return {type: actionTypes.DELETE_KISI_SUCCESS, payload: kisi}
+// }
 
 export function addKisi(kisi) {
     console.log(kisi)
@@ -62,12 +67,34 @@ export function getAllKisiler() {
     // return commonActions.defaultGetApiCaller(tumunuGetirLink, getKisilerSuccess);
 }
 
+// export function deleteKisi(kisi) {
+//     let obj = {
+//         "id": kisi.id,
+//         "adi": kisi.adi,
+//         "soyadi":kisi.soyadi,
+//         "cepTel":kisi.cepTel,
+//         "mail":kisi.mail,
+//         "tcKimlikNo":kisi.tcKimlikNo,
+//         "statu":kisi.statu,
+//         "departman":kisi.departman,
+//     }
+//     return function (dispatch){
+//         fetch('http://localhost:8080/api/kisi/sil', { //http://10.0.254.83:8080/api/kisi/sil/{id}
+//             method: 'DELETE', // or 'PUT'
+//             headers: {
+//                 "Access-Control-Allow-Origin" : "*",
+//                 "Content-Type" : "application/json",
+//             },
+//             body:JSON.stringify(obj)
+//         })
+//             .then(response => response.json())
+//             .then(result => dispatch(deleteKisiSuccess(result.data)));
+//     }
+//     // return commonActions.defaultDeleteApiCaller(deleteLink, deleteKisiSuccess, kisi)
+// }
+
 // export function getKisiSuccess(kisi) {
 //     return {type: actionTypes.GET_KISI_SUCCESS, payload: kisi}
-// }
-//
-// export function deleteKisiSuccess(kisi) {
-//     return {type: actionTypes.DELETE_KISI_SUCCESS, payload: kisi}
 // }
 //
 // export function updateKisiSuccess(kisi) {
@@ -76,10 +103,6 @@ export function getAllKisiler() {
 //
 // export function updateKisi(kisi) {
 //     return commonActions.defaultPutApiCaller(updateLink, updateKisiSuccess, kisi)
-// }
-//
-// export function deleteKisi(kisi) {
-//     return commonActions.defaultDeleteApiCaller(deleteLink, deleteKisiSuccess, kisi)
 // }
 //
 // export function getKisi(id) {
