@@ -6,7 +6,7 @@ import Client from "./Client";
 import {bindActionCreators} from "redux";
 import * as kisiActions from "./redux/actions/KisiActions";
 import {connect} from "react-redux";
-import {AiFillDelete, AiFillEdit, FaArrowRight, GrRefresh} from "react-icons/all";
+import {AiFillDelete, FaUserEdit, GrRefresh} from "react-icons/all";
 
 class KisiGoster extends Component {
 
@@ -57,8 +57,8 @@ class KisiGoster extends Component {
                                         <Button href="/KisiGoster" type="reset" style={
                                             {
                                                 float: "right",
-                                                backgroundColor: "white",
-                                                marginBottom: "5px"
+                                                marginBottom: "5px",
+                                                backgroundColor: "white"
                                             }
                                         }><GrRefresh/></Button>
                                     </div>
@@ -66,7 +66,7 @@ class KisiGoster extends Component {
                                 <Table striped bordered hover size="sm" style={{marginBottom: "30px"}}>
                                     <thead>
                                     <tr>
-                                        <th>#</th>
+                                        <th></th>
                                         <th width="175px">Ad</th>
                                         <th width="175px">Soyad</th>
                                         <th width="175px">TC Kimlik No</th>
@@ -81,7 +81,18 @@ class KisiGoster extends Component {
                                     <tbody>
                                     {this.props.kisiler?.map((kisi) => {
                                         return <tr key={kisi.id}>
-                                            <td><FaArrowRight/></td>
+                                            <td>
+                                                <Button //onClick={() => this.kisiGuncelle()}
+                                                    // style={
+                                                    //     {
+                                                    //         backgroundColor: "#6c757d",
+                                                    //         borderColor: "#6c757d"
+                                                    //         //#6c757d
+                                                    //     }
+                                                    // }
+                                                ><FaUserEdit/>
+                                                </Button>
+                                            </td>
                                             <td>{kisi.adi}</td>
                                             <td>{kisi.soyadi}</td>
                                             <td>{kisi.tcKimlikNo}</td>
@@ -90,22 +101,11 @@ class KisiGoster extends Component {
                                             <td>{kisi.statu}</td>
                                             <td>{kisi.departman}</td>
                                             <td>
-                                                <Button //onClick={() => this.kisiGuncelle()}
+                                                <Button //key={kisi.id} onClick={() => this.kisiSil()}
                                                     style={
                                                         {
                                                             backgroundColor: "#ffa800",
                                                             borderColor: "#ffa800"
-                                                            //#6c757d
-                                                        }
-                                                    }>
-                                                    <AiFillEdit/></Button>
-                                            </td>
-                                            <td>
-                                                <Button //key={kisi.id} onClick={() => this.kisiSil()}
-                                                    style={
-                                                        {
-                                                            backgroundColor: "#6c757d",
-                                                            borderColor: "#6c757d"
                                                         }
                                                     }><AiFillDelete/></Button>
                                             </td>

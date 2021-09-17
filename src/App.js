@@ -16,7 +16,7 @@ class App extends Component {
                         <Navbar.Brand>PEERLOG</Navbar.Brand>
                         <Nav className="me-auto">
                             <Nav.Link href="/KisiGoster">Kişiler</Nav.Link>
-                            <Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>
+                            {/*<Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>*/}
                         </Nav>
                         <Navbar.Toggle/>
                         <Navbar.Collapse className="justify-content-end">
@@ -29,7 +29,7 @@ class App extends Component {
                                 }>Üye Ol</a>
                             </Navbar.Text>
                             <Navbar.Text>
-                                <a href="/">Çıkış Yap</a>
+                                <a href="/">Giriş Yap</a>
                             </Navbar.Text>
                         </Navbar.Collapse>
                     </Container>
