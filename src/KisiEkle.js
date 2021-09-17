@@ -78,30 +78,6 @@ class KisiEkle extends Component {
     render() {
         return (
             <div>
-                <Navbar bg="primary" variant="dark">
-                    <Container>
-                        <Navbar.Brand>PEERLOG</Navbar.Brand>
-                        <Nav className="me-auto">
-                            <Nav.Link href="/KisiGoster">Kişiler</Nav.Link>
-                            <Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>
-                        </Nav>
-                        <Navbar.Toggle/>
-                        <Navbar.Collapse className="justify-content-end">
-                            <Navbar.Text>
-                                <a href="/UyeOl" style={
-                                    {
-                                        padding: "20px",
-
-                                    }
-                                }>Üye Ol</a>
-                            </Navbar.Text>
-                            <Navbar.Text>
-                                <a href="/">Çıkış Yap</a>
-                            </Navbar.Text>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
-
                 <div className={"container"}>
                     <div className={"justify-content-md-center row"}>
                         <div className={"col-lg-7 col-md-auto"}>

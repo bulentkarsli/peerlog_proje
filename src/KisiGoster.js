@@ -6,26 +6,14 @@ import Client from "./Client";
 import {bindActionCreators} from "redux";
 import * as kisiActions from "./redux/actions/KisiActions";
 import {connect} from "react-redux";
-import {AiFillDelete, AiOutlineArrowRight, GrUpdate} from "react-icons/all";
+import {AiFillDelete, AiFillEdit, FaArrowRight, GrRefresh} from "react-icons/all";
 
 class KisiGoster extends Component {
 
     constructor(props) {
         super(props);
         this.client = new Client();
-        this.state = {
-            kisi: [],
-            // kisi: {
-            //     id: "",
-            //     adi: "",
-            //     soyadi: "",
-            //     cepTel: "",
-            //     mail: "",
-            //     tcKimlikNo: "",
-            //     statu: "",
-            //     departman: ""
-            // }
-        };
+        this.state = {kisiler: []};
         this.client.kisi().then(k => this.setState({kisi: k}));
     }
 
@@ -41,36 +29,17 @@ class KisiGoster extends Component {
     }
 
     // kisiSil = () => {
-    //     console.log(this.props.kisiler);
+    //     // console.log(this.props.kisiler);
     //     this.props.actions.deleteKisi(this.state.kisiler)
+    // }
+
+    // kisiGuncelle = () => {
+    //     this.props.actions.updateKisi(this.state.kisiler)
     // }
 
     render() {
         return (
             <div>
-                <Navbar bg="primary" variant="dark">
-                    <Container>
-                        <Navbar.Brand>PEERLOG</Navbar.Brand>
-                        <Nav className="me-auto">
-                            <Nav.Link href="/KisiGoster">Kişiler</Nav.Link>
-                            <Nav.Link href="/KisiEkle">Kişi Ekle</Nav.Link>
-                        </Nav>
-                        <Navbar.Toggle/>
-                        <Navbar.Collapse className="justify-content-end">
-                            <Navbar.Text>
-                                <a href="/UyeOl" style={
-                                    {
-                                        padding: "20px",
-
-                                    }
-                                }>Üye Ol</a>
-                            </Navbar.Text>
-                            <Navbar.Text>
-                                <a href="/">Çıkış Yap</a>
-                            </Navbar.Text>
-                        </Navbar.Collapse>
-                    </Container>
-                </Navbar>
                 <div className={"container"}>
                     <div className={"justify-content-md-center row"}>
                         <div className={"col-lg-12 col-md-auto"}>
@@ -84,8 +53,14 @@ class KisiGoster extends Component {
                                                  paddingLeft: "10px",
                                                  marginTop: "10px"
                                              }
-                                         }>Kayıtlı
-                                        Kişiler
+                                         }>Kayıtlı Kişiler
+                                        <Button href="/KisiGoster" type="reset" style={
+                                            {
+                                                float: "right",
+                                                backgroundColor: "white",
+                                                marginBottom: "5px"
+                                            }
+                                        }><GrRefresh/></Button>
                                     </div>
                                 </div>
                                 <Table striped bordered hover size="sm" style={{marginBottom: "30px"}}>
@@ -99,14 +74,14 @@ class KisiGoster extends Component {
                                         <th width="175px">Mail</th>
                                         <th width="175px">Statü</th>
                                         <th width="175px">Departman</th>
-                                        <th style={{opacity:"0.5"}}></th>
-                                        <th style={{opacity:"0.5"}}></th>
+                                        {/*<th style={{opacity:"0.5"}}></th>*/}
+                                        {/*<th style={{opacity:"0.5"}}></th>*/}
                                     </tr>
                                     </thead>
                                     <tbody>
                                     {this.props.kisiler?.map((kisi) => {
                                         return <tr key={kisi.id}>
-                                            <td><AiOutlineArrowRight/></td>
+                                            <td><FaArrowRight/></td>
                                             <td>{kisi.adi}</td>
                                             <td>{kisi.soyadi}</td>
                                             <td>{kisi.tcKimlikNo}</td>
@@ -115,18 +90,18 @@ class KisiGoster extends Component {
                                             <td>{kisi.statu}</td>
                                             <td>{kisi.departman}</td>
                                             <td>
-                                                <Button
-                                                        style={
-                                                            {
-                                                                backgroundColor: "#ffa800",
-                                                                borderColor: "#ffa800"
-                                                                //#6c757d
-                                                            }
+                                                <Button //onClick={() => this.kisiGuncelle()}
+                                                    style={
+                                                        {
+                                                            backgroundColor: "#ffa800",
+                                                            borderColor: "#ffa800"
+                                                            //#6c757d
                                                         }
-                                                ><GrUpdate/></Button>
+                                                    }>
+                                                    <AiFillEdit/></Button>
                                             </td>
                                             <td>
-                                                <Button //onClick={() => this.kisiSil()}
+                                                <Button //key={kisi.id} onClick={() => this.kisiSil()}
                                                     style={
                                                         {
                                                             backgroundColor: "#6c757d",
@@ -169,6 +144,7 @@ function mapDispatchToProps(dispatch) {
         actions: {
             getAllKisiler: bindActionCreators(kisiActions.getAllKisiler, dispatch),
             // deleteKisi: bindActionCreators(kisiActions.deleteKisi, dispatch),
+            // updateKisi: bindActionCreators(kisiActions.updateKisi, dispatch),
         }
     }
 }
