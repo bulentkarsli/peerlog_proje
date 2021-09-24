@@ -6,7 +6,7 @@ const aktifKisiLink = linkler.backEndEndPoint + linkler.aktifKisi;
 const tumunuGetirLink = kisiLink + linkler.tumunuGetir;
 const kaydetLink = aktifKisiLink + linkler.kaydet;
 const silLink = kisiLink + linkler.sil;
-const guncelleLink = kisiLink + linkler.guncelle;
+const guncelleLink = aktifKisiLink + linkler.guncelle;
 // const idyeGoreGetirLink = kisiLink + linkler.idyeGoreGetir;
 // const updateLink = kisiLink + linkler.guncelle;
 // const deleteLink = kisiLink + linkler.sil;
@@ -22,16 +22,16 @@ export function addKisiSuccess(kisi) {
     return {type: actionTypes.ADD_KISI_SUCCESS, payload: kisi}
 }
 
-// export function updateKisiSuccess(kisi) {
-//     return {type: actionTypes.UPDATE_KISI_SUCCESS, payload: kisi}
-// }
+export function updateKisiSuccess(kisi) {
+    return {type: actionTypes.UPDATE_KISI_SUCCESS, payload: kisi}
+}
 
 // export function deleteKisiSuccess(kisi) {
 //     return {type: actionTypes.DELETE_KISI_SUCCESS, payload: kisi}
 // }
 
 export function addKisi(kisi) {
-    console.log(kisi)
+    // console.log(kisi)
     let obj = {
         "adi": kisi.adi,
         "soyadi":kisi.soyadi,
@@ -56,31 +56,32 @@ export function addKisi(kisi) {
     //return commonActions.defaultPostApiCaller(addLink, addKisiSuccess, kisi)
 }
 
-// export function updateKisi(kisi) {
-//     console.log(kisi)
-//     let obj = {
-//         "adi": kisi.adi,
-//         "soyadi":kisi.soyadi,
-//         "cepTel":kisi.cepTel,
-//         "mail":kisi.mail,
-//         "tcKimlikNo":kisi.tcKimlikNo,
-//         "statu":kisi.statu,
-//         "departman":kisi.departman,
-//     }
-//     return function (dispatch){
-//         fetch('http://localhost:8080/api/kisi/guncelle', { //http://10.0.254.83:8080/api/kisi/tumunu-getir
-//             method: 'POST', // or 'PUT'
-//             headers: {
-//                 "Access-Control-Allow-Origin" : "*",
-//                 "Content-Type" : "application/json",
-//             },
-//             body:JSON.stringify(obj)
-//         })
-//             .then(response => response.json())
-//             .then(result => dispatch(addKisiSuccess(result.data)));
-//     }
-//     // return commonActions.defaultPutApiCaller(updateLink, updateKisiSuccess, kisi)
-// }
+export function updateKisi(kisi) {
+    // console.log(kisi)
+    let obj = {
+        "id":kisi.id,
+        "adi": kisi.adi,
+        "soyadi":kisi.soyadi,
+        "cepTel":kisi.cepTel,
+        "mail":kisi.mail,
+        "tcKimlikNo":kisi.tcKimlikNo,
+        "statu":kisi.statu,
+        "departman":kisi.departman,
+    }
+    return function (dispatch){
+        fetch('http://localhost:8080/api/aktifKisi/guncelle', {
+            method: 'PUT',
+            headers: {
+                "Access-Control-Allow-Origin" : "*",
+                "Content-Type" : "application/json",
+            },
+            body:JSON.stringify(obj)
+        })
+            .then(response => response.json())
+            .then(result => dispatch(updateKisiSuccess(result.data)));
+    }
+    // return commonActions.defaultPutApiCaller(updateLink, updateKisiSuccess, kisi)
+}
 
 export function getAllKisiler() {
     return function (dispatch){

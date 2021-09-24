@@ -3,11 +3,8 @@ import {
     Button,
     Card,
     Col,
-    Container,
     Form,
     InputGroup,
-    Nav,
-    Navbar,
     Row
 } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -60,7 +57,7 @@ class KisiEkle extends Component {
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS) {
         if ((prevProps.kisi !== this.props.kisi) && this.props.kisi) {
-            console.log(this.props.kisi)
+            // console.log(this.props.kisi)
         }
     }
 
@@ -71,7 +68,7 @@ class KisiEkle extends Component {
     }
 
     kisiEkle = () => {
-        console.log(this.props.kisi);
+        // console.log(this.props.kisi);
         this.props.actions.addKisi(this.state.kisi)
     }
 

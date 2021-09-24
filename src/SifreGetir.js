@@ -1,6 +1,6 @@
 import React, {Component} from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import {Alert, Button, Card, Container, Form, InputGroup, Navbar} from "react-bootstrap";
+import {Alert, Button, Card, Form, InputGroup} from "react-bootstrap";
 import {AiOutlinePushpin} from "react-icons/ai";
 import {FaAt} from "react-icons/fa";
 import {Link} from "react-router-dom";
