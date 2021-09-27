@@ -4,7 +4,7 @@ import Page2 from "./UyeOl"
 import Page3 from "./KisiEkle";
 import Page4 from "./KisiGoster";
 import Page5 from "./SifreGetir";
-import {BrowserRouter, Route, Switch} from "react-router-dom";
+import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 import {Container, Nav, Navbar} from "react-bootstrap";
 
 class App extends Component {
@@ -34,7 +34,7 @@ class App extends Component {
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>
-                <BrowserRouter>
+                <Router>
                     <Switch>
                         <Route exact path="/" component={Page1}>
 
@@ -52,7 +52,7 @@ class App extends Component {
 
                         </Route>
                     </Switch>
-                </BrowserRouter>
+                </Router>
             </div>
         );
     }

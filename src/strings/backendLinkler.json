@@ -4,6 +4,8 @@
   "aktifKisi": "aktifKisi/",
   "tumunuGetir": "tumunu-getir",
   "kaydet": "kaydet",
-  "sil": "sil",
-  "guncelle": "guncelle"
+  "sil": "sil/",
+  "guncelle": "guncelle",
+  "yetkili": "yetkili/",
+  "girisControl" : "girisControl"
 }

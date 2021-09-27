@@ -20,8 +20,7 @@ export default function kisiReducer(state = initialState, action) {
         case actionTypes.DELETE_KISI_SUCCESS:
             return {
                 ...state,
-                kisiler: state.kisiler.filter(kisi => action.payload.id !== kisi.id),
-
+                kisiler: state.kisiler.filter(kisi => action.payload !== kisi.id),
             };
         case actionTypes.ADD_KISI_SUCCESS: {
             return {
@@ -34,7 +33,6 @@ export default function kisiReducer(state = initialState, action) {
                 ...state,
                 kisi: action.payload,
                 kisiler: state.kisiler.map((kisi)=> kisi.id=== action.payload.id? action.payload: kisi)
-
             }
         }
         default:

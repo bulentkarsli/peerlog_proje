@@ -44,7 +44,7 @@ class UyeOl extends Component {
                                                             <InputGroup.Text
                                                                 id="btnGroupAddon2"><BsFillExclamationSquareFill
                                                                 style={{"opacity": "0.5"}}/></InputGroup.Text>
-                                                            <Form.Control type="text" placeholder="Ad Giriniz"
+                                                            <Form.Control type="text" placeholder="Adınızı Giriniz"
                                                                           style={{"opacity": "0.5"}}/>
                                                         </InputGroup>
 
@@ -63,7 +63,7 @@ class UyeOl extends Component {
                                                             <InputGroup.Text
                                                                 id="btnGroupAddon2"><BsFillExclamationSquareFill
                                                                 style={{"opacity": "0.5"}}/></InputGroup.Text>
-                                                            <Form.Control type="text" placeholder="Soyad Giriniz"
+                                                            <Form.Control type="text" placeholder="Soyadınızı Giriniz"
                                                                           style={{"opacity": "0.5"}}/>
                                                         </InputGroup>
                                                     </Col>

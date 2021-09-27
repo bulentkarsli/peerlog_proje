@@ -359,7 +359,9 @@ class KisiEkle extends Component {
                                                 <Button href="/KisiGoster" style={
                                                     {
                                                         marginBottom: "15px",
-                                                        float: "right"
+                                                        float: "right",
+                                                        backgroundColor: "#ffa800",
+                                                        borderColor: "#ffa800"
                                                     }
                                                 }>Kişileri Göster</Button>
                                             </Form>

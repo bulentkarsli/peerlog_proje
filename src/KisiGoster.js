@@ -6,7 +6,7 @@ import Client from "./Client";
 import {bindActionCreators} from "redux";
 import * as kisiActions from "./redux/actions/KisiActions";
 import {connect} from "react-redux";
-import {AiFillDelete, FaArrowRight, FaUserEdit, GrRefresh} from "react-icons/all";
+import {AiFillDelete, AiOutlineWarning, FaArrowRight, FaUserEdit, GrRefresh, ImWarning} from "react-icons/all";
 import {BsFillExclamationSquareFill} from "react-icons/bs";
 import {FaAt, FaPhone} from "react-icons/fa";
 
@@ -18,39 +18,43 @@ class KisiGoster extends Component {
         this.client = new Client();
         this.state = {
             kisiler: [],
-            show: false,
+            showG: false,
+            showS: false,
             secilenKisi: null
         };
         this.client.kisi().then(k => this.setState({kisi: k}));
     }
 
-    openModal = (kisi) => {
-        this.setState({show: true, secilenKisi: kisi})
+    openModalGuncelle = (kisi) => {
+        this.setState({showG: true, secilenKisi: kisi})
+    }
+
+    openModalSil = (kisi) => {
+        this.setState({showS: true, secilenKisi: kisi})
     }
 
     closeModal = () => {
-        this.setState({show: false})
+        this.setState({showG: false})
+        this.setState({showS: false})
     }
 
     componentDidMount() {
         this.props.actions.getAllKisiler();
-        // this.props.actions.deleteKisi();
     }
 
     componentDidUpdate(prevProps: Readonly<P>, prevState: Readonly<S>, snapshot: SS) {
         if ((prevProps.kisiler !== this.props.kisiler) && this.props.kisiler) {
-            // console.log(this.props.kisiler)
         }
     }
 
-    // kisiSil = () => {
-    //     // console.log(this.props.kisiler);
-    //     this.props.actions.deleteKisi(this.state.kisiler)
-    // }
+    kisiSil = () => {
+        this.props.actions.deleteKisi(this.state.secilenKisi)
+        this.setState({showS: false})
+    }
 
     kisiGuncelle = () => {
-        this.props.actions.updateKisi(this.state.secilenKisi);
-        this.setState({show: false})
+        this.props.actions.updateKisi(this.state.secilenKisi)
+        this.setState({showG: false})
     }
 
     maxLengthCheck = (object) => {
@@ -73,7 +77,8 @@ class KisiGoster extends Component {
     render() {
         return (
             <div>
-                <Modal show={this.state.show} onHide={this.closeModal} size="lg">
+                {/*Guncelle Modal*/}
+                <Modal show={this.state.showG} onHide={this.closeModal} size="lg">
                     <Modal.Header closeButton>
                         <Modal.Title>Kişi Güncelle</Modal.Title>
                     </Modal.Header>
@@ -212,7 +217,7 @@ class KisiGoster extends Component {
                                                     label="Çalışan"
                                                     name="statu"
                                                     id="formHorizontalRadios1"
-                                                    checked={this.state.secilenKisi?.statu == "Calisan"} // secilenKisi bos mu kontrolu yapar.
+                                                    checked={this.state.secilenKisi?.statu === "Calisan"} // secilenKisi bos mu kontrolu yapar.
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -227,7 +232,7 @@ class KisiGoster extends Component {
                                                     label="Stajyer"
                                                     name="statu"
                                                     id="formHorizontalRadios2"
-                                                    checked={this.state.secilenKisi?.statu == "Stajyer"}
+                                                    checked={this.state.secilenKisi?.statu === "Stajyer"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -242,7 +247,7 @@ class KisiGoster extends Component {
                                                     label="Müşteri"
                                                     name="statu"
                                                     id="formHorizontalRadios3"
-                                                    checked={this.state.secilenKisi?.statu == "Musteri"}
+                                                    checked={this.state.secilenKisi?.statu === "Musteri"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -272,7 +277,7 @@ class KisiGoster extends Component {
                                                     label="Bilgi İşlem"
                                                     name="departman"
                                                     id="formHorizontalRadios4"
-                                                    checked={this.state.secilenKisi?.departman == "BilgiIslem"}
+                                                    checked={this.state.secilenKisi?.departman === "BilgiIslem"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -287,7 +292,7 @@ class KisiGoster extends Component {
                                                     label="İnsan Kaynakları"
                                                     name="departman"
                                                     id="formHorizontalRadios5"
-                                                    checked={this.state.secilenKisi?.departman == "InsanKaynaklari"}
+                                                    checked={this.state.secilenKisi?.departman === "InsanKaynaklari"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -302,7 +307,7 @@ class KisiGoster extends Component {
                                                     label="Muhasebe"
                                                     name="departman"
                                                     id="formHorizontalRadios6"
-                                                    checked={this.state.secilenKisi?.departman == "Muhasebe"}
+                                                    checked={this.state.secilenKisi?.departman === "Muhasebe"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -317,7 +322,7 @@ class KisiGoster extends Component {
                                                     label="Satın Alma"
                                                     name="departman"
                                                     id="formHorizontalRadios7"
-                                                    checked={this.state.secilenKisi?.departman == "SatinAlma"}
+                                                    checked={this.state.secilenKisi?.departman === "SatinAlma"}
                                                     onChange={() => this.setState({
                                                         ...this.state,
                                                         secilenKisi: {
@@ -377,6 +382,30 @@ class KisiGoster extends Component {
 
                     </Modal.Footer>
                 </Modal>
+
+                {/*Sil Modal*/}
+                <Modal show={this.state.showS} onHide={this.closeModal}>
+                    <Modal.Dialog>
+                        <Modal.Header>
+                            <Modal.Title>Kişi Sil</Modal.Title>
+                        </Modal.Header>
+
+                        <Modal.Body>
+                            <p>Seçilen kişiyi silmek istediğinizden emin misiniz?</p>
+                        </Modal.Body>
+
+                        <Modal.Footer>
+                            <Button variant="secondary" onClick={() => this.closeModal()} style={
+                                {
+                                    backgroundColor: "#ffa800",
+                                    borderColor: "#ffa800"
+                                }
+                            }>Vazgeç</Button>{' '}
+                            <Button as="input" type="submit" value="Sil" onClick={() => this.kisiSil()}/>
+                        </Modal.Footer>
+                    </Modal.Dialog>
+                </Modal>
+
                 <div className={"container"}>
                     <div className={"justify-content-md-center row"}>
                         <div className={"col-lg-12 col-md-auto"}>
@@ -425,11 +454,11 @@ class KisiGoster extends Component {
                                             <td>{kisi.statu}</td>
                                             <td>{kisi.departman}</td>
                                             <td>
-                                                <Button onClick={() => this.openModal(kisi)}
+                                                <Button onClick={() => this.openModalGuncelle(kisi)}
                                                 ><FaUserEdit/></Button>
                                             </td>
                                             <td>
-                                                <Button //key={kisi.id} onClick={() => this.kisiSil()}
+                                                <Button  onClick={() => this.openModalSil(kisi)}
                                                     style={
                                                         {
                                                             backgroundColor: "#ffa800",
@@ -471,7 +500,7 @@ function mapDispatchToProps(dispatch) {
         actions: {
             getAllKisiler: bindActionCreators(kisiActions.getAllKisiler, dispatch),
             updateKisi: bindActionCreators(kisiActions.updateKisi, dispatch),
-            // deleteKisi: bindActionCreators(kisiActions.deleteKisi, dispatch),
+            deleteKisi: bindActionCreators(kisiActions.deleteKisi, dispatch),
         }
     }
 }
